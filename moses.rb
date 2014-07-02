@@ -8,6 +8,8 @@ class Moses < Formula
   depends_on 'boost-build' => :build
   depends_on 'xz'  # for liblzma
 
+  conflicts_with 'kenlm', :because => 'Moses provides KenLM'
+
   def install
     args = ["--prefix=#{prefix}",
             "-j#{ENV.make_jobs}",
