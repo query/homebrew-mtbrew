@@ -6,6 +6,7 @@ class Moses < Formula
 
   depends_on 'boost'
   depends_on 'boost-build' => :build
+  depends_on 'xz'  # for liblzma
 
   def install
     args = ["--prefix=#{prefix}",
